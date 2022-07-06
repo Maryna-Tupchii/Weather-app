@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/weaterforecast.css" />
+    <script
+      src="https://kit.fontawesome.com/7343bb2985.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="video-container">
+      <div class="cover-overlay"></div>
+      <video autoplay muted loop id="myVideo">
+        <source
+          src="https://res.cloudinary.com/ds1ktvqk1/video/upload/v1656843865/3182862569_ex7wdq.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="weather-app">
+      <div class="forecast-information">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm shadow form-right"
+          id="currentLocation"
+        >
+          Current Location
+        </button>
+
+        <form class="weather-search" id="citySearch">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                class="form-control"
+                id="citySearchInput"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-outline-secondary shadow"
+              />
+            </div>
+          </div>
+        </form>
+
+        <div class="row">
+          <div class="col-4">
+            <i class="fa-solid fa-sun current-icon"></i>
+            <span class="current-temperature" id="current-temperature">25</span>
+            <p class="celsius-pharengait">
+              <a href="#" id="celcium">ºC</a>|<a href="#" id="fahrenheit">ºF</a>
+            </p>
+          </div>
+          <div class="col-4">
+            <p class="humidity">Humidity: 0%</p>
+            <p id="wind"></p>
+          </div>
+          <div class="current-data col-3">
+            <h1>Kyiv</h1>
+            <p class="date" id="current-date"></p>
+            <p class="clouds">Cloudy</p>
+          </div>
+        </div>
+
+        <div class="row weather-for-a-week">
+          <div class="col-2">
+            <strong>Fr</strong><br />☀<br />
+            <p class="temperature-for-a-week">24ºC<br />19ºC</p>
+          </div>
+          <div class="col-2">
+            <strong>St</strong><br />🌥<br />
+            <p class="temperature-for-a-week">25ºC<br />20ºC</p>
+          </div>
+          <div class="col-2">
+            <strong>Sn</strong><br />☀<br />
+            <p class="temperature-for-a-week">24ºC<br />18ºC</p>
+          </div>
+          <div class="col-2">
+            <strong>Mn</strong><br />☀<br />
+            <p class="temperature-for-a-week">24ºC<br />5ºC</p>
+          </div>
+          <div class="col-2">
+            <strong>Ts</strong><br />☀<br />
+            <p class="temperature-for-a-week">25ºC<br />19ºC</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="coder">
+        <a href="#">Open-source</a> code by
+        <a href="https://www.linkedin.com/in/marina-tupchii-750b12217/"
+          >Marina Tupchii</a
+        >
+        from <a href="https://www.shecodes.io/">SheCodes</a>
+      </p>
+    </div>
+    <script src="src/weatherforecast.js"></script>
+  </body>
+</html>
