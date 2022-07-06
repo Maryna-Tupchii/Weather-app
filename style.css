@@ -1,0 +1,118 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: grey;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(226, 205, 178);
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.3;
+}
+.weather-app {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px;
+  z-index: 2;
+}
+.weather-search {
+  margin: 24px 0 30px 0;
+}
+.forecast-information {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
+  padding: 30px 25px;
+  opacity: 0.9;
+}
+.city-neededtofind {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.current-icon {
+  color: yellow;
+  font-size: 40px;
+}
+.current-temperature {
+  font-size: 40px;
+  color: grey;
+}
+.humidity {
+  font-size: 12px;
+  margin-top: 12px;
+}
+#wind {
+  font-size: 12px;
+}
+.current-data {
+  display: block;
+}
+.clouds {
+  color: grey;
+  text-transform: capitalize;
+  font-size: small;
+}
+
+.date {
+  font-size: 12px;
+}
+.coder {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(197 213 226);
+  font-size: 10px;
+}
+.weather-for-a-week {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+  color: grey;
+  opacity: 0.7;
+}
+
+.temperature-for-a-week {
+  font-size: 10px;
+  color: black;
+}
+.celsius-pharengait {
+  display: inline;
+  font-size: 12px;
+}
+
+.col-3 {
+  padding: 0;
+}
