@@ -92,3 +92,5 @@ cityByDefault("Kyiv");
 
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", showCurrentLocation);
+
+console.log(hello.world);
