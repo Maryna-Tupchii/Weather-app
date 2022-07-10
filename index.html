@@ -66,43 +66,71 @@
 
         <div class="row">
           <div class="col">
-            <i class="fa-solid fa-sun current-icon"></i>
-            <span class="current-temperature" id="current-temperature"></span>
-            <p class="celsius-pharengait">
-              <a href="#" id="celcium">ºC</a>|<a href="#" id="fahrenheit">ºF</a>
-            </p>
+            <div class="temperature d-flex justify-content-start">
+              <i class="fa-solid fa-sun current-icon"></i>
+              <span class="current-temperature" id="current-temperature"></span>
+              <span class="celsius-pharengait">
+                <a href="#" id="celcium">ºC</a>|<a href="#" id="fahrenheit"
+                  >ºF</a
+                >
+              </span>
+            </div>
           </div>
           <div class="col">
             <p class="humidity"></p>
             <p id="wind"></p>
           </div>
-          <div class="current-data col">
-            <h1></h1>
-            <p class="date" id="current-date"></p>
-            <p class="clouds"></p>
+          <div class="col">
+            <div class="current-data">
+              <h1></h1>
+              <p class="date" id="current-date"></p>
+              <p class="clouds"></p>
+            </div>
           </div>
         </div>
 
         <div class="row weather-for-a-week">
-          <div class="col">
-            <strong>Fr</strong><br />☀<br />
-            <p class="temperature-for-a-week">24ºC<br />19ºC</p>
+          <div class="col WeatherForecastPreview">
+            <div class="DayOfAWeek">Fr</div>
+            <img />
+            <div class="temperature-max">24ºC</div>
+            <div class="temperature-max">19ºC</div>
           </div>
+
           <div class="col">
-            <strong>St</strong><br />🌥<br />
-            <p class="temperature-for-a-week">25ºC<br />20ºC</p>
+            <div class="WeatherForecastPreview">
+              <div class="DayOfAWeek">St</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-max">19ºC</div>
+            </div>
           </div>
+
           <div class="col">
-            <strong>Sn</strong><br />☀<br />
-            <p class="temperature-for-a-week">24ºC<br />18ºC</p>
+            <div class="WeatherForecastPreview">
+              <div class="DayOfAWeek">Sn</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-max">19ºC</div>
+            </div>
           </div>
+
           <div class="col">
-            <strong>Mn</strong><br />☀<br />
-            <p class="temperature-for-a-week">24ºC<br />5ºC</p>
+            <div class="WeatherForecastPreview">
+              <div class="DayOfAWeek">Sn</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-max">19ºC</div>
+            </div>
           </div>
+
           <div class="col">
-            <strong>Ts</strong><br />☀<br />
-            <p class="temperature-for-a-week">25ºC<br />19ºC</p>
+            <div class="WeatherForecastPreview">
+              <div class="DayOfAWeek">Sn</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-max">19ºC</div>
+            </div>
           </div>
         </div>
       </div>
