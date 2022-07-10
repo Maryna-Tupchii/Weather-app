@@ -24,131 +24,140 @@
   </head>
 
   <body>
-    <div class="video-container">
-      <div class="cover-overlay"></div>
-      <video autoplay muted loop id="myVideo">
-        <source
-          src="https://res.cloudinary.com/ds1ktvqk1/video/upload/v1656843865/3182862569_ex7wdq.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-
-    <div class="weather-app container">
-      <div class="forecast-information">
-        <button
-          type="button"
-          class="btn btn-secondary btn-sm shadow form-right"
-          id="currentLocation"
-        >
-          Current Location
-        </button>
-
-        <form class="weather-search" id="citySearch">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                class="form-control"
-                id="citySearchInput"
-              />
-            </div>
-            <div class="col-3 p-0">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-outline-secondary w-100 shadow"
-              />
-            </div>
-          </div>
-        </form>
-
-        <div class="row">
-          <div class="col">
-            <div class="temperature d-flex justify-content-start">
-              <i class="fa-solid fa-sun current-icon"></i>
-              <span class="current-temperature" id="current-temperature"></span>
-              <span class="celsius-pharengait">
-                <a href="#" id="celcium">ºC</a>|<a href="#" id="fahrenheit"
-                  >ºF</a
-                >
-              </span>
-            </div>
-          </div>
-          <div class="col">
-            <p class="humidity"></p>
-            <p id="wind"></p>
-          </div>
-          <div class="col">
-            <div class="current-data">
-              <h1></h1>
-              <p class="date" id="current-date"></p>
-              <p class="clouds"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row weather-for-a-week">
-          <div class="col WeatherForecastPreview">
-            <div class="DayOfAWeek">Fr</div>
-            <img />
-            <div class="temperature-max">24ºC</div>
-            <div class="temperature-max">19ºC</div>
-          </div>
-
-          <div class="col">
-            <div class="WeatherForecastPreview">
-              <div class="DayOfAWeek">St</div>
-              <img />
-              <div class="temperature-max">24ºC</div>
-              <div class="temperature-max">19ºC</div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="WeatherForecastPreview">
-              <div class="DayOfAWeek">Sn</div>
-              <img />
-              <div class="temperature-max">24ºC</div>
-              <div class="temperature-max">19ºC</div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="WeatherForecastPreview">
-              <div class="DayOfAWeek">Sn</div>
-              <img />
-              <div class="temperature-max">24ºC</div>
-              <div class="temperature-max">19ºC</div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="WeatherForecastPreview">
-              <div class="DayOfAWeek">Sn</div>
-              <img />
-              <div class="temperature-max">24ºC</div>
-              <div class="temperature-max">19ºC</div>
-            </div>
-          </div>
-        </div>
+    <div class="root">
+      <div class="video-container">
+        <div class="cover-overlay"></div>
+        <video autoplay muted loop id="myVideo">
+          <source
+            src="https://res.cloudinary.com/ds1ktvqk1/video/upload/v1656843865/3182862569_ex7wdq.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
 
-      <p class="coder">
-        This project was coded by
-        <a
-          href="https://www.linkedin.com/in/marina-tupchii-750b12217/"
-          target="_blank"
-          >Marina Tupchii</a
-        >
-        and is
-        <a href="https://github.com/Maryna-Tupchii/Weather-app" target="_blank"
-          >opened sourced on GitHub</a
-        >
-        from
-        <a href="https://www.shecodes.io/" target="_blank">SheCodes</a>
-      </p>
+      <div class="weather-app container">
+        <div class="forecast-information">
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm shadow form-right"
+            id="currentLocation"
+          >
+            Current Location
+          </button>
+
+          <form class="weather-search" id="citySearch">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control"
+                  id="citySearchInput"
+                />
+              </div>
+              <div class="col-3 p-0">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-outline-secondary w-100 shadow"
+                />
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col">
+              <div class="temperature d-flex justify-content-start">
+                <i class="fa-solid fa-sun current-icon"></i>
+                <span
+                  class="current-temperature"
+                  id="current-temperature"
+                ></span>
+                <span class="celsius-pharengait">
+                  <a href="#" id="celcium">ºC</a>|<a href="#" id="fahrenheit"
+                    >ºF</a
+                  >
+                </span>
+              </div>
+            </div>
+
+            <div class="col">
+              <p class="humidity"></p>
+              <p id="wind"></p>
+            </div>
+
+            <div class="col">
+              <div class="current-data">
+                <h1></h1>
+                <p class="date" id="current-date"></p>
+                <p class="clouds"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row weather-for-a-week">
+            <div class="col WeatherForecastPreview">
+              <div class="DayOfAWeek">Fr</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-max">19ºC</div>
+            </div>
+
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="DayOfAWeek">St</div>
+                <img />
+                <div class="temperature-max">24ºC</div>
+                <div class="temperature-max">19ºC</div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="DayOfAWeek">Sn</div>
+                <img />
+                <div class="temperature-max">24ºC</div>
+                <div class="temperature-max">19ºC</div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="DayOfAWeek">Sn</div>
+                <img />
+                <div class="temperature-max">24ºC</div>
+                <div class="temperature-max">19ºC</div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="DayOfAWeek">Sn</div>
+                <img />
+                <div class="temperature-max">24ºC</div>
+                <div class="temperature-max">19ºC</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="coder">
+          This project was coded by
+          <a
+            href="https://www.linkedin.com/in/marina-tupchii-750b12217/"
+            target="_blank"
+            >Marina Tupchii</a
+          >
+          and is
+          <a
+            href="https://github.com/Maryna-Tupchii/Weather-app"
+            target="_blank"
+            >opened sourced on GitHub</a
+          >
+          from
+          <a href="https://www.shecodes.io/" target="_blank">SheCodes</a>
+        </p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

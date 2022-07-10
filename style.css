@@ -20,7 +20,8 @@ p {
 }
 
 i {
-  margin-top: 12px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 #myVideo {
@@ -84,6 +85,7 @@ i {
 }
 .current-data {
   display: block;
+  text-align: right;
 }
 .clouds {
   color: grey;
@@ -114,6 +116,7 @@ i {
   color: black;
 }
 .celsius-pharengait {
+  position: relative;
   font-size: 12px;
   margin-top: 12px;
 }
