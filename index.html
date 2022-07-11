@@ -17,10 +17,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/7343bb2985.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -47,7 +43,7 @@
 
           <form class="weather-search" id="citySearch">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city..."
@@ -55,7 +51,7 @@
                   id="citySearchInput"
                 />
               </div>
-              <div class="col-3 p-0">
+              <div class="col-4 p-0">
                 <input
                   type="submit"
                   value="Search"
@@ -66,9 +62,13 @@
           </form>
 
           <div class="row">
-            <div class="col">
+            <div class="col" id="temperature">
               <div class="temperature d-flex justify-content-start">
-                <i class="fa-solid fa-sun current-icon"></i>
+                <img
+                  src=" http://openweathermap.org/img/wn/10d@2x.png"
+                  alt="icon"
+                  id="weatherIcon"
+                />
                 <span
                   class="current-temperature"
                   id="current-temperature"
@@ -81,7 +81,7 @@
               </div>
             </div>
 
-            <div class="col">
+            <div class="col" id="windSpeed">
               <p class="humidity"></p>
               <p id="wind"></p>
             </div>

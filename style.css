@@ -19,9 +19,9 @@ p {
   margin-bottom: 0;
 }
 
-i {
-  margin-top: 10px;
-  margin-right: 10px;
+#weatherIcon {
+  width: 80px;
+  height: 80px;
 }
 
 #myVideo {
@@ -66,6 +66,15 @@ i {
 .city-neededtofind {
   margin: 20px 0;
   padding: 10px 0;
+}
+
+#temperature {
+  padding: 0;
+  text-align: match-parent;
+}
+
+#windSpeed {
+  text-align: end;
 }
 
 .current-icon {
@@ -116,7 +125,7 @@ i {
   color: black;
 }
 .celsius-pharengait {
-  position: relative;
+  position: static;
   font-size: 12px;
   margin-top: 12px;
 }
