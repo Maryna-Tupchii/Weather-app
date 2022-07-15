@@ -22,9 +22,11 @@ function formatedDate(date) {
 function showWeather(response) {
   console.log(response.data);
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  celcium = response.data.main.temp;
+
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celcium);
   document.querySelector(
     ".humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -73,14 +75,26 @@ function showCurrentLocation(event) {
 function showFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector(".current-temperature");
-  temperature.innerHTML = `77`;
+  temperature.innerHTML = Math.round((celcium * 9) / 5 + 32);
+  celciumLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function showCelcium(event) {
   event.preventDefault();
   let temperature = document.querySelector(".current-temperature");
-  temperature.innerHTML = `25`;
+  temperature.innerHTML = Math.round(celcium);
+  fahrenheitLink.classList.remove("active");
+  celciumLink.classList.add("active");
 }
+
+let celcium = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celciumLink = document.querySelector("#celcium");
+celciumLink.addEventListener("click", showCelcium);
 
 let date = new Date();
 let currentDate = document.querySelector("#current-date");
@@ -89,15 +103,7 @@ currentDate.innerHTML = formatedDate(date);
 let formEnterCity = document.querySelector("#citySearch");
 formEnterCity.addEventListener("submit", findCity);
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheit);
-
-let celcium = document.querySelector("#celcium");
-celcium.addEventListener("click", showCelcium);
-
 cityByDefault("Kyiv");
 
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", showCurrentLocation);
-
-console.log(hello.world);
