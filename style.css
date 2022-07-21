@@ -32,15 +32,15 @@ p {
   min-height: 100vh;
 }
 
-.cover-overlay {
+.coverOverlay {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(226, 205, 178);
+  background-color: rgb(39, 36, 32);
   width: 100%;
   height: 100vh;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .weather-app {
   position: relative;

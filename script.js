@@ -1,7 +1,12 @@
 function formatedDate(date) {
   let hours = date.getHours();
+
   if (hours < 10) {
     hours = `0${hours}`;
+  }
+
+  if (hours >= 7 && hours <= 19) {
+    document.body.style.coverOverlay = "Green";
   }
   let minutes = date.getMinutes();
   let mins = ("0" + minutes).slice(-2);
@@ -17,6 +22,13 @@ function formatedDate(date) {
   ];
   let day = days[date.getDay()];
   return `${day} ${hours}:${mins}`;
+}
+
+function getWeatherForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "9549d1243cd3ebb69e853ea242123151";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axious.get(apiURL).then();
 }
 
 function showWeather(response) {
@@ -41,6 +53,25 @@ function showWeather(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  getWeatherForecast(response.data.coord);
+}
+
+function showForecast() {
+  let forecastElement = document.querySelector("#weekForecast");
+
+  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col WeatherForecastPreview">
+              <div class="DayOfAWeek">${day}</div>
+              <img />
+              <div class="temperature-max">24ºC</div>
+              <div class="temperature-min">19ºC</div>
+            </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function cityByDefault(city) {
@@ -104,6 +135,7 @@ let formEnterCity = document.querySelector("#citySearch");
 formEnterCity.addEventListener("submit", findCity);
 
 cityByDefault("Kyiv");
+showForecast();
 
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", showCurrentLocation);

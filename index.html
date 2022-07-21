@@ -22,7 +22,7 @@
   <body>
     <div class="root">
       <div class="video-container">
-        <div class="cover-overlay"></div>
+        <div class="coverOverlay"></div>
         <video autoplay muted loop id="myVideo">
           <source
             src="https://res.cloudinary.com/ds1ktvqk1/video/upload/v1656843865/3182862569_ex7wdq.mp4"
@@ -97,50 +97,7 @@
             </div>
           </div>
 
-          <div class="row weather-for-a-week">
-            <div class="col WeatherForecastPreview">
-              <div class="DayOfAWeek">Fr</div>
-              <img />
-              <div class="temperature-max">24ºC</div>
-              <div class="temperature-max">19ºC</div>
-            </div>
-
-            <div class="col">
-              <div class="WeatherForecastPreview">
-                <div class="DayOfAWeek">St</div>
-                <img />
-                <div class="temperature-max">24ºC</div>
-                <div class="temperature-max">19ºC</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="WeatherForecastPreview">
-                <div class="DayOfAWeek">Sn</div>
-                <img />
-                <div class="temperature-max">24ºC</div>
-                <div class="temperature-max">19ºC</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="WeatherForecastPreview">
-                <div class="DayOfAWeek">Sn</div>
-                <img />
-                <div class="temperature-max">24ºC</div>
-                <div class="temperature-max">19ºC</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="WeatherForecastPreview">
-                <div class="DayOfAWeek">Sn</div>
-                <img />
-                <div class="temperature-max">24ºC</div>
-                <div class="temperature-max">19ºC</div>
-              </div>
-            </div>
-          </div>
+          <div class="row weather-for-a-week" id="weekForecast"></div>
         </div>
 
         <p class="coder">
