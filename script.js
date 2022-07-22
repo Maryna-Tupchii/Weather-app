@@ -4,10 +4,6 @@ function formatedDate(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
-  if (hours >= 7 && hours <= 19) {
-    document.body.style.coverOverlay = "Green";
-  }
   let minutes = date.getMinutes();
   let mins = ("0" + minutes).slice(-2);
 
@@ -62,6 +58,7 @@ function showWeather(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   getWeatherForecast(response.data.coord);
+  changeVideo(response.data.weather[0].main);
 }
 
 function showForecast(response) {
@@ -136,6 +133,26 @@ function showCelcium(event) {
   temperature.innerHTML = Math.round(celcium);
   fahrenheitLink.classList.remove("active");
   celciumLink.classList.add("active");
+}
+
+function changeVideo(backgroundWeather) {
+  let vid = document.querySelector("#myVideo");
+  if (backgroundWeather === "Clouds") {
+    vid.src =
+      "https://res.cloudinary.com/ds1ktvqk1/video/upload/v1658422816/pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-6772574_1_pwmphc.mp4";
+  }
+  if (backgroundWeather === "Rain") {
+    vid.src =
+      "https://res.cloudinary.com/ds1ktvqk1/video/upload/v1658422816/pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-6772574_1_pwmphc.mp4";
+  }
+  if (backgroundWeather === "Clear") {
+    vid.src =
+      "https://res.cloudinary.com/ds1ktvqk1/video/upload/v1656843865/3182862569_ex7wdq.mp4";
+  }
+  if (backgroundWeather === "Snow") {
+    vid.src =
+      "https://res.cloudinary.com/ds1ktvqk1/video/upload/v1658422793/video_cthjgt.mp4";
+  }
 }
 
 let celcium = null;
