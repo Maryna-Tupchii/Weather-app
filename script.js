@@ -121,16 +121,17 @@ function showCurrentLocation(event) {
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector(".current-temperature");
-  temperature.innerHTML = Math.round((celcium * 9) / 5 + 32);
+  document.querySelector("#current-temperature").innerHTML = Math.round(
+    (celcium * 9) / 5 + 32
+  );
   celciumLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 }
 
 function showCelcium(event) {
   event.preventDefault();
-  let temperature = document.querySelector(".current-temperature");
-  temperature.innerHTML = Math.round(celcium);
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celcium);
   fahrenheitLink.classList.remove("active");
   celciumLink.classList.add("active");
 }
