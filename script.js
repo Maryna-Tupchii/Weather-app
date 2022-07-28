@@ -102,6 +102,8 @@ function findCity(event) {
   event.preventDefault();
   let city = document.querySelector("#citySearchInput").value;
   cityByDefault(city);
+  fahrenheitLink.classList.remove("active");
+  celciumLink.classList.add("active");
 }
 
 function findLocation(position) {
